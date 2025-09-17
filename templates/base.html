@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% block head %}
-    <link rel="stylesheet" href="style.css" />
-    <title>{% block title %}{% endblock %} - My Webpage</title>
-    {% endblock %}
+    <link rel="stylesheet" href="static/style.css"/>
+    <title>{% block title %}Base{% endblock %}</title>
 </head>
 <body>
     <nav>
@@ -15,11 +13,10 @@
         </ol>
     </nav>
     <div id="content">{% block content %}{% endblock %}</div>
-    <div id="footer">
-        {% block footer %}
-        <p>&copy; Copyright 2007 by <a href="http://domain.invalid/">you</a><br>
-        Find us on social media: <a href="https://facebook.com/">Facebook</a></p>
-        {% endblock %}
-    </div>
+    <footer>
+            <p>&copy; Copyright 2007 by <a href="http://domain.invalid/">you</a><br>
+            Find us on social media: <a href="https://facebook.com/">Facebook</a></p>
+    </footer>
+        
 </body>
 </html>

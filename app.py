@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request
-import os
 
 app = Flask(__name__)
 
@@ -19,9 +18,9 @@ def contact():
 
 @app.route('/sent', methods=['POST'])
 def write():
-    content = request.form.get('message', '') + request.form.get('name', '')
-    with open(FILE_PATH, 'w', encoding='utf-8') as f: #Flaggan 'w' (write) anger att filen ska skrivas
-        f.write(content)    # .write() skriver innehållet i variabeln content till filen
+    content = f"{request.form.get('name', '')}, {request.form.get('message', '')}"
+    with open(FILE_PATH, 'a', encoding='utf-8') as f:
+        f.write(content + "\n")
     return render_template("contact.html", file_content=content)
 
 if __name__ == '__main__':

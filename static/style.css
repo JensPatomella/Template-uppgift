@@ -1,0 +1,30 @@
+nav {
+    padding: 1vh;
+    background-color: black;
+}
+
+ol {
+    display: flex;
+    flex-direction: row;
+}
+
+li {
+    margin-right: 1vw;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 4vh 40vw;
+    margin-bottom: 1vh;
+}
+
+#content {
+    margin-top: 1vh;
+    background-color: rgb(184, 213, 238);
+}
+
+footer {
+    padding: 1vh;
+    background-color: bisque;
+}

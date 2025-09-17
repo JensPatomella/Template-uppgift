@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <link rel="stylesheet" href="style.css" />
+    <title>{% block title %}{% endblock %} - My Webpage</title>
+    {% endblock %}
+</head>
+<body>
+    <nav>
+        <ol>
+            <li><a href="/templates/about.html">About</a></li>
+            <li><a href="/templates/index.html">BMX</a></li>
+            <li"><a href="/templates/"></a></li>
+        </ol>
+    </nav>
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer">
+        {% block footer %}
+        &copy; Copyright 2007 by <a href="http://domain.invalid/">you</a>{br}
+        Find us on social media: <a href="https://facebook.com/"></a>
+        {% endblock %}
+    </div>
+</body>
+</html>
